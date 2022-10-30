@@ -1,11 +1,9 @@
 public class Employee_wage {
     public static final int IS_FULL_TIME = 2;
     public static final int IS_PART_TIME = 1;
-    public static final int Emp_Rate_Per_Hr = 20;
-    public static final int Num_of_working_day = 20;
-    public static final int Max_hrs_in_month = 100;
 
-    public static void computeEmployeeWage() {
+
+    public static void computeEmployeeWage(String companyName, int Emp_Rate_Per_Hr, int Num_of_working_day, int Max_hrs_in_month ) {
         int empHrs = 0;
         int totalEmp_hrs = 0;
         int total_working_days = 0;
@@ -33,6 +31,10 @@ public class Employee_wage {
     }
 
     public static void main(String[] args) {
-        computeEmployeeWage();
+        System.out.println("Details for Parle-G");
+        computeEmployeeWage("Parle-G",20,20,100);
+
+        System.out.println("Details for Tiger");
+        computeEmployeeWage("Tiger",22,22,120);
     }
 }
